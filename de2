@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thi tốt nghiệp-CNT20C062</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script src="../JS/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="mainform border border-primary rounded">
+            <div class="row">
+                <div class="col text-center">
+                    <img src="../IMG/Blank-Employee.jpg" alt="" style="border-radius: 50%;width: 100px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="txtusername" placeholder="Email" class="form-control">
+                    <input type="password" id="txtpassword" placeholder="Mật Khẩu" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <input type="button" value="Đăng nhập" class="btn btn-primary" id="btnsubmit">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#"> Bạn cần giúp gì?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+index.css
+.mainform{
+    width: 60%;
+    /*border-radius: 5px;*/
+    /*border: 1px solid blue;*/
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 20%;
+}
+img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input[type="text"],input[type="password"]{
+    margin: 10px;
+    width: 96%;
+}
+input[type="text"]:hover,input[type="password"]:hover{
+    border-radius: 10px;
+    border: 1px solid red;
+    background-color: yellow;
+}
+#btnsubmit{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+a{
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+<index.js>ok</index.js>
+$(document).ready(function(){
+    $("#btnsubmit").click(function(){
+        var user =$("#txtusername").val();
+        var password=$("#txtpassword").val();
+        if(user.trim().length>0 && password.trim().length>0)
+        {
+            location.href="http://tgc.edu.vn";
+        }
+        else
+        {
+            alert("Username và password không được bỏ trống");
+        }
+    })
+})
